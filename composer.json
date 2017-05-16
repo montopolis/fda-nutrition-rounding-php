@@ -1,0 +1,13 @@
+{
+    "name": "montopolis/fda-nutrition-rounding-php",
+    "description": "Library for rounding nutrition values according to FDA guidelines.",
+    "type": "library",
+    "license": "Proprietary",
+    "authors": [
+        {
+            "name": "Corey Mcmahon",
+            "email": "contact@coreymcmahon.com"
+        }
+    ],
+    "require": {}
+}
