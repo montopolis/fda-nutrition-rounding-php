@@ -9,5 +9,23 @@
             "email": "contact@coreymcmahon.com"
         }
     ],
-    "require": {}
+    "require": {
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Montopolis\\Fda\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MontopolisTests\\Fda\\": "tests/"
+        },
+        "files": [
+            "tests/AbstractRoundingTest.php"
+        ]
+    }
 }
