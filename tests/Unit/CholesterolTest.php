@@ -13,6 +13,6 @@ class CholesterolTest extends \AbstractRoundingTest
 
     protected function round($value)
     {
-        return $this->sut->calorie($value)->toInt();
+        return $this->sut->cholesterol($value)->toInt();
     }
 }

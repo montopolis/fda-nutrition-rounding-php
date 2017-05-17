@@ -13,6 +13,6 @@ class PotassiumTest extends \AbstractRoundingTest
 
     protected function round($value)
     {
-        return $this->sut->calorie($value)->toInt();
+        return $this->sut->potassium($value)->toInt();
     }
 }
