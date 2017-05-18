@@ -4,8 +4,10 @@ Basic library for rounding nutritional information according to FDA guidelines (
 
 ## Install
 
+You can add the library to your existing project using Composer:
+
 ```bash
-composer install montopolis/fda-nutrition-rounding-php
+composer require montopolis/fda-nutrition-rounding-php
 ```
 
 ## Usage
