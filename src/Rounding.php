@@ -1,6 +1,6 @@
 <?php
 /**
- * <short description>
+ * Rounding
  *
  * <long description>
  *
@@ -18,10 +18,12 @@ namespace Montopolis\Fda;
  * @method Rounders\AbstractRounder calorie($value)
  * @method Rounders\AbstractRounder carbohydrate($value)
  * @method Rounders\AbstractRounder cholesterol($value)
+ * @method Rounders\AbstractRounder dietaryFiber($value)
  * @method Rounders\AbstractRounder fat($value)
- * @method Rounders\AbstractRounder fiber($value)
  * @method Rounders\AbstractRounder mineral($value)
+ * @method Rounders\AbstractRounder otherFiber($value)
  * @method Rounders\AbstractRounder potassium($value)
+ * @method Rounders\AbstractRounder protein($value)
  * @method Rounders\AbstractRounder sodium($value)
  * @method Rounders\AbstractRounder sugar($value)
  * @method Rounders\AbstractRounder vitamin($value)

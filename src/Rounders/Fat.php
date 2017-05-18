@@ -1,8 +1,10 @@
 <?php
 /**
- * <short description>
+ * Fat
  *
- * <long description>
+ * < .5 g - express as 0
+ * < 5 g - express to nearest .5g increment
+ * ≥5 g - express to nearest 1 g increment
  *
  * @author coreymcmahon
  */

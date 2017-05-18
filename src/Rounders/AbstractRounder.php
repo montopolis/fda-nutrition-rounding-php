@@ -1,8 +1,9 @@
 <?php
+
 /**
- * <short description>
+ * AbstractRounder
  *
- * <long description>
+ * Contains the base functions required to round nutritional values. All concrete implementations inherit from this.
  *
  * @author coreymcmahon
  */
@@ -11,9 +12,12 @@ namespace Montopolis\Fda\Rounders;
 
 abstract class AbstractRounder
 {
+    // defaults to 'g'
     protected $units = 'g';
 
-    private $rounded;
+    protected $value;
+
+    protected $rounded;
 
     /**
      * AbstractRounder constructor.
@@ -21,6 +25,7 @@ abstract class AbstractRounder
      */
     public function __construct($value)
     {
+        $this->value = (float) $value;
         $this->rounded = $this->round($value);
     }
 
@@ -88,6 +93,7 @@ abstract class AbstractRounder
      */
     protected function toClosest($value, $round)
     {
+        // x100 to round using 2dp of precision
         $value = (float) $value * 100;
         $round = $round * 100;
         $mod = $value % $round;

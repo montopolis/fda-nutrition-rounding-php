@@ -19,4 +19,10 @@ class CarbohydrateTest extends \AbstractRoundingTest
     {
         return $this->sut->carbohydrate($value)->toInt();
     }
+
+    public function test_it_renders_string_value()
+    {
+        $str = '' . $this->sut->carbohydrate(0.51);
+        $this->assertEquals('less than 1 g', $str);
+    }
 }

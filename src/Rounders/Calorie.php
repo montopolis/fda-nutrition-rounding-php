@@ -1,8 +1,11 @@
 <?php
+
 /**
- * <short description>
+ * Calorie
  *
- * <long description>
+ * < 5 cal - express as 0
+ * ≤50 cal - express to nearest 5 cal increment
+ * > 50 cal - express to nearest 10 cal increment
  *
  * @author coreymcmahon
  */
@@ -11,6 +14,8 @@ namespace Montopolis\Fda\Rounders;
 
 class Calorie extends AbstractRounder
 {
+    protected $units = 'cal';
+
     /**
      * @param $value
      * @return float

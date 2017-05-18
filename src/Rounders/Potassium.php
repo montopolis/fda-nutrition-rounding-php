@@ -1,8 +1,10 @@
 <?php
 /**
- * <short description>
+ * Potassium
  *
- * <long description>
+ * < 5 mg - express as 0
+ * 5 - 140 mg - express to nearest 5 mg increment
+ * > 140 mg - express to nearest 10 mg increment
  *
  * @author coreymcmahon
  */

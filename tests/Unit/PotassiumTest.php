@@ -7,7 +7,7 @@ class PotassiumTest extends \AbstractRoundingTest
     protected function getTestCases()
     {
         return [
-            123 => 120,
+            "4.9" => 0,
         ];
     }
 

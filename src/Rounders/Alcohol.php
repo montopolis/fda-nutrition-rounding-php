@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Sugar
+ * Alcohol
  *
  * < .5 g - express as 0
  * < 1 g - express as "Contains less than 1 g" or "less than 1 g"
@@ -11,7 +12,7 @@
 
 namespace Montopolis\Fda\Rounders;
 
-class Sugar extends Carbohydrate
+class Alcohol extends Carbohydrate
 {
-
+    
 }

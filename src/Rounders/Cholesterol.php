@@ -1,9 +1,11 @@
 <?php
 
 /**
- * <short description>
+ * Cholesterol
  *
- * <long description>
+ * < 2 mg - express as 0
+ * 2 - 5 mg - express as "less than 5 mg"
+ * > 5 mg - express to nearest 5 mg increment
  *
  * @author coreymcmahon
  */
@@ -14,6 +16,18 @@ class Cholesterol extends AbstractRounder
 {
     protected $units = 'mg';
 
+    /**
+     * @return string
+     */
+    public function toString()
+    {
+        if ($this->value >= 2 && $this->value < 5.0) {
+            return 'less than 5 ' . $this->units;
+        }
+
+        return parent::toString();
+    }
+    
     /**
      * @param $value
      * @return float
