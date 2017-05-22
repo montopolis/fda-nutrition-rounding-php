@@ -19,15 +19,15 @@ class Cholesterol extends AbstractRounder
     /**
      * @return string
      */
-    public function toString()
+    public function toFormatted()
     {
         if ($this->value >= 2 && $this->value < 5.0) {
             return 'less than 5 ' . $this->units;
         }
 
-        return parent::toString();
+        return parent::toFormatted();
     }
-    
+
     /**
      * @param $value
      * @return float

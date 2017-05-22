@@ -2,7 +2,7 @@
 /**
  * Rounding
  *
- * <long description>
+ * This class handles selecting the right implementation of the rounder based on the requested unit.
  *
  * @author coreymcmahon
  *

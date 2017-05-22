@@ -23,7 +23,7 @@ class CholesterolTest extends \AbstractRoundingTest
 
     public function test_it_renders_string_value()
     {
-        $str = '' . $this->sut->cholesterol(3);
+        $str = '' . $this->sut->cholesterol(3)->toFormatted();
         $this->assertEquals('less than 5 mg', $str);
     }
 }

@@ -35,9 +35,9 @@ abstract class AbstractRoundingTest extends \PHPUnit\Framework\TestCase
     public function test_it_rounds_correctly()
     {
         foreach ($this->getTestCases() as $case => $expected) {
-            
+
             $actual = $this->round($case);
-            
+
             $this->assertEquals($expected, $actual);
         }
     }

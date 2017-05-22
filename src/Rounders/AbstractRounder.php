@@ -12,11 +12,13 @@ namespace Montopolis\Fda\Rounders;
 
 abstract class AbstractRounder
 {
-    // defaults to 'g'
+    /** @var string */
     protected $units = 'g';
 
+    /** @var float */
     protected $value;
 
+    /** @var float */
     protected $rounded;
 
     /**
@@ -42,7 +44,7 @@ abstract class AbstractRounder
      */
     public function toFloat()
     {
-        return number_format($this->rounded, 1);
+        return round($this->rounded, 2);
     }
 
     /**
@@ -51,17 +53,6 @@ abstract class AbstractRounder
     public function toFormatted()
     {
         return "{$this->rounded} {$this->units}";
-    }
-
-    /**
-     * @return string
-     */
-    public function toString()
-    {
-        if ($this->toFloat() == $this->toInt()) {
-            return "" . $this->toFloat();
-        }
-        return "" . $this->toInt();
     }
 
     /**
@@ -77,7 +68,7 @@ abstract class AbstractRounder
      */
     public function __toString()
     {
-        return $this->toString();
+        return $this->toFormatted();
     }
 
     /**
@@ -93,9 +84,10 @@ abstract class AbstractRounder
      */
     protected function toClosest($value, $round)
     {
-        // x100 to round using 2dp of precision
-        $value = (float) $value * 100;
-        $round = $round * 100;
+        // x1000 to round using 3dp of precision. We really want 2dp, but calculating with 3 will prevent float rounding
+        // discrepancies
+        $value = $value * 1000;
+        $round = $round * 1000;
         $mod = $value % $round;
 
         if ($mod < ($round / 2)) {
@@ -104,6 +96,6 @@ abstract class AbstractRounder
             $calc = $value + ($round - $mod);
         }
 
-        return $calc / 100;
+        return round($calc / 1000, 2);
     }
 }

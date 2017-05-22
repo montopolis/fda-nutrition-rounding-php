@@ -17,13 +17,13 @@ class Carbohydrate extends AbstractRounder
     /**
      * @return string
      */
-    public function toString()
+    public function toFormatted()
     {
-        if ($this->value > .5 && $this->value < 1.0) {
+        if ($this->value > 0.5 && $this->value < 1.0) {
             return 'less than 1 ' . $this->units;
         }
-        
-        return parent::toString();
+
+        return parent::toFormatted();
     }
 
     /**

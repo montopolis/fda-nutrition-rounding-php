@@ -22,7 +22,7 @@ class CarbohydrateTest extends \AbstractRoundingTest
 
     public function test_it_renders_string_value()
     {
-        $str = '' . $this->sut->carbohydrate(0.51);
+        $str = '' . $this->sut->carbohydrate(0.51)->toFormatted();
         $this->assertEquals('less than 1 g', $str);
     }
 }
