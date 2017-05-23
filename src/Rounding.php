@@ -27,6 +27,7 @@ namespace Montopolis\Fda;
  * @method Rounders\AbstractRounder sodium($value)
  * @method Rounders\AbstractRounder sugar($value)
  * @method Rounders\AbstractRounder vitamin($value)
+ * @method Rounders\Generic generic($value, $dp, $unit)
  */
 class Rounding
 {
