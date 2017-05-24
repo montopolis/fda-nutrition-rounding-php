@@ -34,6 +34,11 @@ class Rounding
     public function __call($name, $arguments)
     {
         $className = __NAMESPACE__ . '\\Rounders\\' . ucwords($name);
+        
+        if (count($arguments) > 1) {
+            return new $className($arguments[0], $arguments[1], $arguments[2]);
+        }
+
         return new $className($arguments[0]);
     }
 }
