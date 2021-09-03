@@ -13,11 +13,9 @@
             "email": "babul@montopolis.com"
         }
     ],
-    "require": {
-
-    },
+    "require": {},
     "require-dev": {
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "4.0 - 9.5.9"
     },
     "autoload": {
         "psr-4": {
